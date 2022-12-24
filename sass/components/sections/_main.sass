@@ -1,0 +1,46 @@
+@use '../../variables'
+@use '../../keyframes'
+@use '../../mixins'
+
+@use 'home'
+@use 'projects'
+@use 'skills'
+@use 'contact'
+
+.section-container
+  @include mixins.flex-center(column)
+  z-index: 1000
+
+  width: 100%
+  min-height: 400px
+  padding: 1.5rem 2.3rem
+
+  h2
+    margin: 2.6rem 40px
+    animation: fade .8s ease-in-out
+    border-bottom: 2px solid variables.$primary-color
+
+    &::before
+      content: ''
+      transition: .5s
+
+    &:hover::before
+      content: ' # '
+      margin-right: 5px
+      color: variables.$primary-color
+
+.weave
+  width: 100%
+  z-index: -1
+  position: relative
+  background-color: variables.$primary-color
+
+  &.cubic
+    background-color: #131313
+
+
+#about-content
+  width: 50%
+
+  @include mixins.mobile
+    width: 90%

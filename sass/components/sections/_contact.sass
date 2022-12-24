@@ -1,0 +1,46 @@
+@use '../../variables'
+@use '../../mixins'
+
+#contact
+  ul
+    display: flex
+    gap: 20px
+
+    @include mixins.mobile
+      flex-direction: column
+
+    li > a
+      $default-color: variables.$secondary-dark-color
+
+      @include mixins.flex-center(column)
+      @include mixins.fill-container
+      @include mixins.link-reset
+      justify-content: space-between
+      text-align: center
+
+      padding: 1rem
+      border-radius: 7px
+      border: 2px solid $default-color
+      background-color: $default-color
+      transition: .2s ease-in-out
+
+      strong
+        color: variables.$primary-color
+
+      header
+        @include mixins.flex-center
+        font-size: 1.4rem
+        gap: 10px
+
+        h3, i, span
+          color: variables.$primary-color
+
+        h3
+          border-bottom: 1px solid rgba(13, 13, 13, .3)
+
+      p
+        width: 60%
+
+      &:hover, &:focus
+        border-color: variables.$secondary-color
+        filter: brightness(1.2)

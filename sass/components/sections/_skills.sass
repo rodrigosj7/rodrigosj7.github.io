@@ -1,0 +1,66 @@
+@use '../../variables'
+@use '../../mixins'
+
+#skills
+  background-color: variables.$primary-color
+  padding-top: 0
+
+  h2
+    margin-top: 0
+    border-bottom: 2px solid variables.$secondary-color
+
+    &:hover::before
+      color: variables.$secondary-color
+
+  .skill-container
+    @include mixins.flex-center
+    justify-content: flex-start
+    gap: 22px
+
+    width: 60%
+    margin: 0 5.2rem
+    animation: fade-right .6s ease-in-out
+
+    @include mixins.mobile
+      width: 100%
+      flex-direction: column
+      justify-content: center
+      gap: 22px
+
+    .skill-info
+      @inlcude mixins.flex-center(column)
+      min-width: 50%
+      font-size: 13pt
+
+      h3
+        font-size: 17pt
+        border-left: 3.2px solid variables.$secondary-color
+        padding-left: .4rem
+        margin-bottom: 1.2rem
+
+    #skills-list
+      display: flex
+      gap: 8px
+      flex-wrap: wrap
+      max-width: 500px
+
+      @include mixins.mobile
+        @include mixins.flex-center
+        width: 100%
+
+      .skill
+        @include mixins.flex-center(column)
+        font-size: 2rem
+        cursor: pointer
+        transition: .5s
+
+        padding: .6em
+        border-radius: 50%
+        border: 2px solid variables.$dark-color
+        background-color: variables.$dark-color
+
+        &:hover, &:focus
+          color: variables.$dark-color
+          animation: rotate-object 1s
+          background-color: transparent
+          

@@ -1,0 +1,76 @@
+@use '../../variables'
+@use '../../mixins'
+
+.projects-container
+  @include mixins.flex-center
+  flex-wrap: wrap
+  height: 40%
+
+#show-more
+  @include mixins.link-reset
+  font-family: 'Roboto', monospace
+  color: variables.$primary-color
+  
+  margin-top: 4rem
+  padding-bottom: 5px
+  
+  @include mixins.underline-hover(variables.$primary-color)
+
+.project
+  $image-size: 230px
+  max-width: 440px
+  max-height: 380px
+
+  margin: .4rem
+  padding: 5.8px
+  border-radius: 9px
+  background-color: variables.$secondary-dark-color
+
+  @include mixins.mobile
+    width: 90%
+
+  a
+    @include mixins.link-reset
+    @include mixins.flex-center(column)
+    @include mixins.fill-container
+    transition: filter .5s
+
+    .image-container
+      @include mixins.flex-center
+      width: 100%
+      overflow: hidden
+
+      img
+        height: $image-size
+        transition: .4s
+    
+    &:hover
+      filter: brightness(1.2)
+
+      img
+        transform: scale(1.5)
+
+.info-container
+  @include mixins.flex-center(column)
+  align-items: flex-start
+  gap: 6px
+  
+  width: 100%
+  padding-left: 1.5rem
+
+  h3
+    color: variables.$primary-color
+  
+  p
+    width: 90%
+
+  .used-tech
+    display: flex
+    flex-wrap: wrap
+    padding-top: 5px
+    gap: 9.4px
+
+    li
+      padding: 2px
+      border-radius: 4px
+      background-color: variables.$secondary-color

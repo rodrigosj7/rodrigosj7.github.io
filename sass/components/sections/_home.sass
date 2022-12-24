@@ -1,0 +1,44 @@
+@use '../../variables'
+@use '../../keyframes'
+@use '../../mixins'
+
+#home
+  @include mixins.flex-center(row)
+  justify-content: space-evenly
+  gap: 22px
+
+  @include mixins.mobile
+    flex-direction: column-reverse
+    justify-content: space-between
+    gap: 33px
+
+  img
+    width: 20rem
+    padding: 2px
+    border-radius: 50%
+    border: 2px solid variables.$primary-color
+    animation: floating 2.1s infinite
+
+    @include mixins.mobile
+      max-width: 70%
+
+  div
+    @include mixins.flex-center(column)
+    align-items: flex-start
+    text-align: center
+
+    h1
+      font-size: 28pt
+
+    span
+      text-transform: uppercase
+      color: variables.$primary-color
+
+      &:after
+        $cursor-color: variables.$white-color
+        content: ' '
+        margin-left: 6px
+        border: 1.4px solid $cursor-color
+        background-color: $cursor-color
+        animation: blink-cursor 1s infinite
+      

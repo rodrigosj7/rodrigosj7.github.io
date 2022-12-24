@@ -1,0 +1,29 @@
+@use '../mixins'
+@use '../variables'
+  
+.footer
+  @include mixins.flex-center(column)
+
+  padding: 3.2rem
+  margin-top: 6rem
+  background-color: variables.$secondary-dark-color
+
+  span > a
+    @include mixins.link-reset
+    color: variables.$secondary-color
+
+    &:hover, &:focus 
+      color: variables.$primary-color
+      
+  div
+    @include mixins.flex-center
+    gap: 15px
+
+    margin-top: 1.5rem
+    padding-top: 1.5rem
+    border-top: 2px solid rgba(13, 13, 13, .5)
+
+    a
+      @include mixins.link-reset
+      font-size: 1.2rem
+  

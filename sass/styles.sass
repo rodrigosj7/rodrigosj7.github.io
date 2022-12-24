@@ -1,0 +1,24 @@
+@use 'mixins'
+@use 'variables'
+
+@use 'components/navbar'
+@use 'components/footer'
+@use 'components/sections/main'
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  list-style: none
+
+html
+  scroll-behavior: smooth
+
+body
+  @include mixins.scrollbars(10px, variables.$secondary-color, variables.$secondary-dark-color, 10px)
+  color: variables.$white-color
+  background-color: variables.$dark-color
+  font-family: 'Ubuntu', sans-serif
+
+  h1, h2, h3
+    font-family: 'Roboto', monospace
