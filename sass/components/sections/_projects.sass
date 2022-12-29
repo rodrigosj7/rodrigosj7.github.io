@@ -29,6 +29,10 @@
   @include mixins.mobile
     width: 90%
 
+  @include mixins.mobile(370px)
+    width: 70%
+    max-height: 400px
+
   a
     @include mixins.link-reset
     @include mixins.flex-center(column)
@@ -70,7 +74,15 @@
     padding-top: 5px
     gap: 9.4px
 
+    @include mixins.mobile(370px)
+      padding-top: 2.2px
+      height: 20%
+
     li
       padding: 2px
       border-radius: 4px
       background-color: variables.$secondary-color
+
+      @include mixins.mobile(370px)
+        padding: 1.2px
+        font-size: 14px

@@ -350,6 +350,12 @@
     width: 90%;
   }
 }
+@media (max-width: 370px) {
+  .project {
+    width: 70%;
+    max-height: 400px;
+  }
+}
 .project a {
   color: white;
   transtion: 0.5s;
@@ -409,10 +415,22 @@
   padding-top: 5px;
   gap: 9.4px;
 }
+@media (max-width: 370px) {
+  .info-container .used-tech {
+    padding-top: 2.2px;
+    height: 20%;
+  }
+}
 .info-container .used-tech li {
   padding: 2px;
   border-radius: 4px;
   background-color: #755eba;
+}
+@media (max-width: 370px) {
+  .info-container .used-tech li {
+    padding: 1.2px;
+    font-size: 14px;
+  }
 }
 
 #skills {

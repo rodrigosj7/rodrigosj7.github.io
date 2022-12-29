@@ -58,6 +58,6 @@
     scrollbar-face-color: $foreground-color
     scrollbar-track-color: $background-color
 
-@mixin mobile
-  @media(max-width: 768px)
+@mixin mobile($max-w: 768px)
+  @media(max-width: $max-w)
     @content
