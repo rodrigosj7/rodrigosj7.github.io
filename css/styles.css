@@ -591,6 +591,10 @@
   color: #a07dd5;
 }
 
+#about, #projects, #skills, #contact, .weave {
+  visibility: hidden;
+}
+
 .weave {
   width: 100%;
   z-index: -1;

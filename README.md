@@ -25,6 +25,7 @@ Foram utilizadas as seguintes ferramentas/tecnologias no desenvolvimento deste s
 - [favicon.io](https://favicon.io/)
 - [devicon](https://devicon.dev/)
 - [getwaves](https://getwaves.io/)
+- [ScrollReveal](https://scrollrevealjs.org/)
 
 ---
 
